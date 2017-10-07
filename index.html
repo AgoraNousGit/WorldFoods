@@ -7,235 +7,311 @@
 <body>
 	
 	<h1>World Foods Starter</h1>
-	<canvas> id="foods" width="500" height="500"</canvas>
+	<canvas id="foods" width="800" height="800"></canvas>
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script>
 		/* global d3 */
 		var graph = {
 			nodes: [
-   				{ name: "salt", occurrence: [
+   				{ name: "salt", 
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 937},
       				{cuisine: "brazilian", num: 194},
       				{cuisine: "cajun-creole", num: 743}
       				] 
       			},
-      			{ name: "onions", occurrence: [
+      			{ name: "onions", 
+                              cuisine: "cajun-creole",  
+                              occurrence: [
       				{cuisine: "all", num: 384},
       				{cuisine: "brazilian", num: 102},
       				{cuisine: "cajun-creole", num: 282}
       				] 
       			},
-      			{ name: "olive oil", occurrence: [
+      			{ name: "olive oil", 
+                              cuisine: "cajun-creole",  
+                              occurrence: [
       				{cuisine: "all", num: 231},
       				{cuisine: "brazilian", num: 83},
       				{cuisine: "cajun-creole", num: 148}
       				] 
       			},
-      			{ name: "garlic", occurrence: [
+      			{ name: "garlic", 
+                              cuisine: "cajun-creole",  
+                              occurrence: [
       				{cuisine: "all", num: 258},
       				{cuisine: "brazilian", num: 57},
       				{cuisine: "cajun-creole", num: 201},
       				] 
       			},
-      			{ name: "water", occurrence: [
+      			{ name: "water", 
+                              cuisine: "cajun-creole",  
+                              occurrence: [
       				{cuisine: "all", num: 220},
       				{cuisine: "brazilian", num: 56},
       				{cuisine: "cajun-creole", num: 164},
       				] 
       			},
-      			{ name: "garlic cloves", occurrence: [
+      			{ name: "garlic cloves", 
+                              cuisine: "cajun-creole",  
+                              occurrence: [
       				{cuisine: "all", num: 187},
       				{cuisine: "brazilian", num: 56},
       				{cuisine: "cajun-creole", num: 131},
       				] 
       			},
-      			{ name: "pepper", occurrence: [
+      			{ name: "pepper", 
+                              cuisine: "cajun-creole",  
+                              occurrence: [
       				{cuisine: "all", num: 116},
       				{cuisine: "brazilian", num: 53},
       				{cuisine: "cajun-creole", num: 63},
       				] 
       			},
-      			{ name: "tomatoes", occurrence: [
+      			{ name: "tomatoes", 
+                              cuisine: "cajun-creole",  
+                              occurrence: [
       				{cuisine: "all", num: 104},
       				{cuisine: "brazilian", num: 41},
       				{cuisine: "cajun-creole", num: 63},
       				] 
       			},
-      			{ name: "ground black pepper", occurrence: [
+      			{ name: "ground black pepper",
+                              cuisine: "cajun-creole",  
+                              occurrence: [
       				{cuisine: "all", num: 204},
       				{cuisine: "brazilian", num: 38},
       				{cuisine: "cajun-creole", num: 166},
       				] 
       			},
-      			{ name: "eggs", occurrence: [
+      			{ name: "eggs", 
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 97},
       				{cuisine: "brazilian", num: 35},
       				{cuisine: "cajun-creole", num: 62},
       				] 
       			},
-      			{ name: "cocnut milk", occurrence: [
+      			{ name: "cocnut milk", 
+                              cuisine: "brazilian", 
+                              occurrence: [
       				{cuisine: "all", num: 34},
       				{cuisine: "brazilian", num: 33},
       				{cuisine: "cajun-creole", num: 1},
       				] 
       			},
-      			{ name: "vegetable oil", occurrence: [
+      			{ name: "vegetable oil",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 170},
       				{cuisine: "brazilian", num: 31},
       				{cuisine: "cajun-creole", num: 139},
       				] 
       			},
-      			{ name: "milk", occurrence: [
+      			{ name: "milk",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 77},
       				{cuisine: "brazilian", num: 24},
       				{cuisine: "cajun-creole", num: 53},
       				] 
       			},
-      			{ name: "butter", occurrence: [
+      			{ name: "butter",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 193},
       				{cuisine: "brazilian", num: 23},
       				{cuisine: "cajun-creole", num: 170},
       				] 
       			},
-      			{ name: "carrots", occurrence: [
+      			{ name: "carrots",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 44},
       				{cuisine: "brazilian", num: 21},
       				{cuisine: "cajun-creole", num: 23},
       				] 
       			},
-      			{ name: "black beans", occurrence: [
+      			{ name: "black beans",  
+                              cuisine: "brazilian", 
+                              occurrence: [
       				{cuisine: "all", num: 24},
       				{cuisine: "brazilian", num: 20},
       				{cuisine: "cajun-creole", num: 4},
       				] 
       			},
-      			{ name: "red bell pepper", occurrence: [
+      			{ name: "red bell pepper",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 105},
       				{cuisine: "brazilian", num: 20},
       				{cuisine: "cajun-creole", num: 85},
       				] 
       			},
-      			{ name: "lime", occurrence: [
+      			{ name: "lime",  
+                              cuisine: "brazilian", 
+                              occurrence: [
       				{cuisine: "all", num: 22},
       				{cuisine: "brazilian", num: 19},
       				{cuisine: "cajun-creole", num: 3},
       				] 
       			},
-      			{ name: "bay leaf", occurrence: [
+      			{ name: "bay leaf",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 150},
       				{cuisine: "brazilian", num: 19},
       				{cuisine: "cajun-creole", num: 131},
       				] 
       			},
-      			{ name: "black pepper", occurrence: [
+      			{ name: "black pepper",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 130},
       				{cuisine: "brazilian", num: 16},
       				{cuisine: "cajun-creole", num: 114},
       				] 
       			},
-      			{ name: "oil", occurrence: [
+      			{ name: "oil",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 43},
       				{cuisine: "brazilian", num: 16},
       				{cuisine: "cajun-creole", num: 27},
       				] 
       			},
-      			{ name: "bay leaves", occurrence: [
+      			{ name: "bay leaves",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 146},
       				{cuisine: "brazilian", num: 15},
       				{cuisine: "cajun-creole", num: 131},
       				] 
       			},
-      			{ name: "fresh cilantro", occurrence: [
+      			{ name: "fresh cilantro",  
+                              cuisine: "brazilian", 
+                              occurrence: [
       				{cuisine: "all", num: 17},
       				{cuisine: "brazilian", num: 15},
       				{cuisine: "cajun-creole", num: 2},
       				] 
       			},
-      			{ name: "green onions", occurrence: [
+      			{ name: "green onions",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 147},
       				{cuisine: "brazilian", num: 14},
       				{cuisine: "cajun-creole", num: 133},
       				] 
       			},
-      			{ name: "green bell pepper", occurrence: [
+      			{ name: "green bell pepper",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 188},
       				{cuisine: "brazilian", num: 12},
       				{cuisine: "cajun-creole", num: 176},
       				] 
       			},
-      			{ name: "cayenne pepper", occurrence: [
+      			{ name: "cayenne pepper",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 183},
       				{cuisine: "brazilian", num: 10},
       				{cuisine: "cajun-creole", num: 173},
       				] 
       			},
-      			{ name: "cajun seasoning", occurrence: [
+      			{ name: "cajun seasoning",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 125},
       				{cuisine: "brazilian", num: 0},
       				{cuisine: "cajun-creole", num: 125},
       				] 
       			},
-      			{ name: "all purpose flour", occurrence: [
+      			{ name: "all purpose flour",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 105},
       				{cuisine: "brazilian", num: 14},
       				{cuisine: "cajun-creole", num: 191},
       				] 
       			},
-      			{ name: "celery", occurrence: [
+      			{ name: "celery",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 149},
       				{cuisine: "brazilian", num: 1},
       				{cuisine: "cajun-creole", num: 148},
       				] 
       			},
-      			{ name: "vegetable oil", occurrence: [
+      			{ name: "vegetable oil",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 170},
       				{cuisine: "brazilian", num: 31},
       				{cuisine: "cajun-creole", num: 139},
       				] 
       			},
-      			{ name: "dried thyme", occurrence: [
+      			{ name: "dried thyme",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 134},
       				{cuisine: "brazilian", num: 2},
       				{cuisine: "cajun-creole", num: 132},
       				] 
       			},
-      			{ name: "andouille sausage", occurrence: [
+      			{ name: "andouille sausage",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 92},
       				{cuisine: "brazilian", num: 1},
       				{cuisine: "cajun-creole", num: 91},
       				] 
       			},
-      			{ name: "creole seasoning", occurrence: [
+      			{ name: "creole seasoning",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 73},
       				{cuisine: "brazilian", num: 0},
       				{cuisine: "cajun-creole", num: 73},
       				] 
       			},
-      			{ name: "shrimp", occurrence: [
+      			{ name: "shrimp",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 121},
       				{cuisine: "brazilian", num: 17},
       				{cuisine: "cajun-creole", num: 104},
       				] 
       			},
-      			{ name: "fresh parsley", occurrence: [
+      			{ name: "fresh parsley",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 119},
       				{cuisine: "brazilian", num: 13},
       				{cuisine: "cajun-creole", num: 106},
       				] 
       			},
-      			{ name: "paprika", occurrence: [
+      			{ name: "paprika",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 105},
       				{cuisine: "brazilian", num: 9},
       				{cuisine: "cajun-creole", num: 96},
       				] 
       			},
-      			{ name: "worcestershire sauce", occurrence: [
+      			{ name: "worcestershire sauce",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 97},
       				{cuisine: "brazilian", num: 2},
       				{cuisine: "cajun-creole", num: 95},
       				] 
       			},
-      			{ name: "diced tomatoes", occurrence: [
+      			{ name: "diced tomatoes",  
+                              cuisine: "cajun-creole", 
+                              occurrence: [
       				{cuisine: "all", num: 93},
       				{cuisine: "brazilian", num: 13},
       				{cuisine: "cajun-creole", num: 80},
@@ -244,47 +320,58 @@
 			]
 		};
 
-		//console.log(graph.nodes);
-
-		// graph.nodes.forEach(function(d) {
-		// 	console.log(d.occurrence[0].num)
-		// })
+		console.log(graph.nodes);
 
 		var canvas=d3.select("#foods"),
 		  width = canvas.attr("width"),
 		  height = canvas.attr("height"),
+              color = d3.scaleOrdinal(d3.schemeCategory10),
 		  ctx = canvas.node().getContext("2d"),
 		  r=3;
 
+              //Drawing Text
+
+            //There are several options for setting text
+            ctx.font = "20px Open Sans";
+            //textAlign supports: start, end, left, right, center
+            ctx.textAlign = "center"
+            //textBaseline supports: top, hanging, middle, alphabetic, ideographic bottom
+            ctx.textBaseline = "hanging"
+
 		graph.nodes.forEach(function(d) {
-			d.x = Math.random()*width;
-			d.y = Math.random()*height;
-			// t= d.occurrence[0].num;
-			// console.log(t);
-			// d.r = 30*(d.occurrence[0].num)/937;
+			d.x = Math.random() * width;
+			d.y = Math.random() * height;
+			d.r = 50*(d.occurrence[0].num)/937; 
+                  //937 is a hack -- shd be calculated!
 		});
 
 		function update() {
 			ctx.clearRect(0,0,width,height);
 			ctx.beginPath();
-			cts.globalAlpha = 1.0;
+			// cts.globalAlpha = 1.0;
 			graph.nodes.forEach(drawNode);
 			ctx.fill();
 		
 		}
 
 		function drawNode(d) {
-			ctx.moveTo(d.x, d.y);
 			ctx.beginPath();
-			ctx.arc(d.x, d.y, r, 0, Math.PI*2);
+                  ctx.fillStyle = color(d.cuisine);
+                  ctx.moveTo(d.x, d.y);
+			ctx.arc(d.x, d.y, d.r, 0, Math.PI*2);
 			ctx.fill();
+                  // ctx.fillStyle = "red";
+                  ctx.fillText(d.name,d.x,d.y);
+                  
 		}
 
 		update();
 
 	</script>
-
-
-
+<style><![CDATA[
+text{
+    font: bold 36px Verdana, Helvetica, Arial, sans-serif;
+}
+]]></style>
 </body>
 </html>
